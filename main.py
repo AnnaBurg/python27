@@ -50,6 +50,9 @@ def flood(a, row, column, fl):
         a[row][column] = old_color
 
 def new_game():
+    global count
+    count = 0
+    label.config(text=f'Количество ходов: {count}')
     for i in range(5):
         for j in range(5):
             a[i][j] = random.randint(1, 3)
